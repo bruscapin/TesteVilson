@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Consulta</h1>
+		<table>
+			<thead>
+				<tr>
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Cor</th>
+				<th>Sexo</th>
+				</tr>
+			</thead>
+			<tbody>
+				 <tr th:each="gato: ${gatos}">
+                    <td th:text="*{gato.id}"/>
+                    <td th:text="*{gato.nome}"/>
+                    <td th:text="*{gato.cor}"/>
+                    <td th:text="*{gato.sexo}"/>
+                    <td> 
+                    <a th:href="@{'/consulta/'+${gato.id}}" >editar></a>
+                    <a th:href="@{'/delete/'+${gato.id}}" >excluir></a> 
+                    
+                    </td>
+				 </tr>
+			</tbody>
+		</table>
+	<a th:href="@{/cadastro}">Cadastro</a>
+	</body>
+</html>

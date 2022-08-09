@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<h1>Cadastro</h1>
+		<form th:action="@{/cadastro}" method="post">
+		<label for="idnome">Nome</label>
+		<input id="idnome" type="text" placeholder="Informe nome" name="nome" />
+		
+		<label for="idcor">Cor</label>
+		<input id="icor" type="text" placeholder="Informe cor" name="cor"/>
+		
+		<label for="idsexo">Sexo</label>
+		<input id="idsexo" type="text" placeholder="Informe sexo" name="sexo" />
+		
+			<button>Salvar</button>
+	</body>
+</html>

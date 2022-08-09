@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	<div class="container">
+		<h1>Edição de contato</h1>
+		<form th:action="@{/cadastro}" method="post" th:object="${gato}">
+			<label>Id</label>
+			<input type="text" th:field "*{id}" readonly/>
+			
+			<label for="idnome">Nome</label>
+			<input id="idnome" type="text" placeholder="Informe nome" th:field="*{nome}" />
+		
+			<label for="idcor">Cor</label>
+			<input id="icor" type="text" placeholder="Informe cor" th:field="*{cor}"/>
+		
+			<label for="idsexo">Sexo</label>
+			<input id="idsexo" type="text" placeholder="Informe sexo" th:field="*{sexo}" />
+		
+			<button>Salvar</button>
+		</form>
+		</div>
+	</body>
+</html>
